@@ -109,7 +109,7 @@
                         {{!imp[2]}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/img/on2.png" width="100px"></a> <a href="/views/license">리버티 스킨</a>
+                        <a href="https://github.com/2DU/openNAMU"><img src="/views/img/on2.png" width="100px"></a> <a href="/views/license.html">리버티 스킨</a>
                     </div>
                 </div>
             </div>
