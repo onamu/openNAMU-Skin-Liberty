@@ -44,6 +44,12 @@ a.navbar-brand {
     margin-right: 20px;
 }
 
+#open:hover {
+    color: black;
+    background: white;
+    border: 1px solid #ccc;
+}
+
 .font-size-2 {
     font-size: 140%;
 }
@@ -292,8 +298,8 @@ a.out_link::before {
 }
 
 #open {
-    background: #B2DFEA;
-    text-shadow: none;
+    background: #4188F1;
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
