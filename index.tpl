@@ -2,7 +2,6 @@
     <head>
         <title>{{imp[0]}} - {{imp[1]}}</title>
         <link rel="stylesheet" href="/views/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/views/css/font/Noto Sans KR.css">
         <link rel="stylesheet" href="/views/css/default.css">
         <link rel="stylesheet" href="/views/css/default_mobile.css">
         <link rel="stylesheet" href="/views/css/jquery-ui.min.css">
