@@ -1,5 +1,6 @@
 <html>
     <head>
+        <title>{{imp[0]}} - {{imp[1]}}</title>
         <link rel="stylesheet" href="/views/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/views/css/font/Noto Sans KR.css">
         <link rel="stylesheet" href="/views/css/default.css">
@@ -50,23 +51,32 @@
                         <a class="nav-link" href="/recent_discuss"><span class="fa fa-comments"></span><span class="hide-title">최근 토론</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/random"><span style="line-height: 1.4rem;" class="fa fa-random"></span></a>
+                        <a class="nav-link" href="/random"><span id="nav_icon" class="fa fa-random"></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user">
                             % if(imp[3] == 1):
-                                <span style="line-height: 1.4rem;" class="fa fa-user"></span>
+                                <span id="nav_icon" class="fa fa-user"></span>
                             % elif(imp[3] == 0):
-                                <span style="line-height: 1.4rem;" class="fa fa-user-times"></span>
+                                <span id="nav_icon" class="fa fa-user-times"></span>
                             % else:
-                                <span style="line-height: 1.4rem;" class="fa fa-user-secret"></span>
+                                <span id="nav_icon" class="fa fa-user-secret"></span>
                             % end
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/other"><span style="line-height: 1.4rem;" class="fa fa-cogs"></span></a>
+                        <a class="nav-link" href="/other"><span id="nav_icon" class="fa fa-cogs"></span></a>
                     </li>
                 </ul>
+                <form method="post" action="/search" id="searchform" class="form-inline">
+                    <div class="input-group">
+                        <input type="search" name="search" placeholder="검색" accesskey="f" class="form-control" id="searchInput" autocomplete="off">
+                        <span class="input-group-btn">
+                            <button formaction="/goto" name="go" value="보기" id="searchGoButton" class="btn btn-secondary"><span class="fa fa-eye"></span></button>
+                            <button name="fulltext" value="검색" id="searchSearchButton" class="btn btn-secondary"><span class="fa fa-search"></span></button>
+                        </span>
+                    </div>
+                </form>
             </nav>
         </div>
         <div class="scroll-buttons">
@@ -93,7 +103,7 @@
                         </div>
                     % end
                     <div class="title">
-                        <h1>
+                        <h1 id="main_title">
                             {{imp[0]}}
                             % if(not imp[6] == 0):
                                 <sub>{{imp[6]}}</sub>
