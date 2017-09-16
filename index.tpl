@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="/views/css/default.css">
         <link rel="stylesheet" href="/views/css/default_mobile.css">
         <link rel="stylesheet" href="/views/css/jquery-ui.min.css">
-        <script type="text/javascript" src="/views/js/lib/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="/views/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/views/js/lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="/views/js/layout.js"></script>
         <link rel="stylesheet" href="/views/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
@@ -50,21 +51,22 @@
                         <a class="nav-link" href="/recent_discuss"><span class="fa fa-comments"></span><span class="hide-title">최근 토론</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/random"><span id="nav_icon" class="fa fa-random"></span></a>
+                        <a class="nav-link" href="/random"><span class="fa fa-random"></span><span class="hide-title">랜덤</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user">
                             % if(imp[3] == 1):
-                                <span id="nav_icon" class="fa fa-user"></span>
+                                <span class="fa fa-user"></span>
                             % elif(imp[3] == 0):
-                                <span id="nav_icon" class="fa fa-user-times"></span>
+                                <span class="fa fa-user-times"></span>
                             % else:
-                                <span id="nav_icon" class="fa fa-user-secret"></span>
+                                <span class="fa fa-user-secret"></span>
                             % end
+                            <span class="hide-title">사용자</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/other"><span id="nav_icon" class="fa fa-cogs"></span></a>
+                        <a class="nav-link" href="/other"><span class="fa fa-cogs"></span><span class="hide-title">기타</span></a>
                     </li>
                 </ul>
                 <form method="post" action="/search" id="searchform" class="form-inline">
@@ -89,13 +91,36 @@
                     % if(not menu == 0):
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
+                            % i = 1
                                 % for sub_d in menu:
-                                    % if(sub_d[1] == 1):
-                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="open">토론</a>
-                                    % elif(sub_d[1] == 0):
-                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">토론</a>
+                                    % if(i > 4 or i < 0):
+                                        % if(i > 4):
+                                            <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                <span class="caret"></span>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                            % i = -100
+                                        % end
+                                        % if(sub_d[1] == 1):
+                                            <a class="dropdown-item" href="/{{sub_d[0]}}" id="open">토론</a>
+                                        % elif(sub_d[1] == 0):
+                                            <a class="dropdown-item" href="/{{sub_d[0]}}">토론</a>
+                                        % else:
+                                            <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        % end
                                     % else:
-                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        % i += 1
+                                        % if(sub_d[1] == 1):
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="open">토론</a>
+                                        % elif(sub_d[1] == 0):
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">토론</a>
+                                        % else:
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        % end
+                                    % end
+                                % else:
+                                    % if(i < 0):
+                                        </div>
                                     % end
                                 % end
                             </div>
