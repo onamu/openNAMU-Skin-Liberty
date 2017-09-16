@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/views/css/awesome/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
         <link rel="stylesheet" href="/views/css/style.css">
+        <link rel="shortcut icon" href="/views/img/on.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="/views/js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/views/js/lib/bootstrap.min.js"></script>
