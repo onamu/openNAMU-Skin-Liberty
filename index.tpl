@@ -5,15 +5,15 @@
         <link rel="stylesheet" href="/views/css/default.css">
         <link rel="stylesheet" href="/views/css/default_mobile.css">
         <link rel="stylesheet" href="/views/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="/views/css/awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+        <link rel="stylesheet" href="/views/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="/views/js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/views/js/lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="/views/js/layout.js"></script>
-        <link rel="stylesheet" href="/views/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-        <link rel="stylesheet" href="/views/css/awesome/font-awesome.min.css">
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
         <style>{{!imp[4]}}</style>
