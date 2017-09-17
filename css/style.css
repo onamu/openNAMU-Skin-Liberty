@@ -18,6 +18,10 @@ li {
     background: #f5f8fa;
 }
 
+#syntax {
+    margin-bottom: -20px;
+}
+
 #cate {
     width: 100%;
     border: 1px solid #777;
