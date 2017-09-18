@@ -147,7 +147,7 @@ blockquote {
     background:#eeeeee;
     display:table;
     border:2px dashed #ccc;
-    border-left:5px solid #52A9BD;
+    border-left:5px solid #4188F1;
     background-image: url('/views/img/quote.png');
     background-position:calc(100% - 10px) 10px;
     background-repeat:no-repeat;
