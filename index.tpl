@@ -94,8 +94,8 @@
                             <div class="btn-group" role="group" aria-label="content-tools">
                             % i = 1
                                 % for sub_d in menu:
-                                    % if(i > 4 or i < 0):
-                                        % if(i > 4):
+                                    % if(i > 5 or i < 0):
+                                        % if(i > 5):
                                             <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                 <span class="caret"></span>
                                             </button>
