@@ -526,6 +526,7 @@ del, s, strike {
     border-right: 1px solid #e1e8ed;
     background-color: #fff;
     padding: 1rem;
+    padding-bottom: 30px;
     overflow: hidden;
     line-height: 1.6rem;
 }
@@ -657,7 +658,3 @@ caption {
     caption-side: top;
 }
 /* 부트스트랩 커스텀 End*/
-
-.liberty-content-main.wiki-article {
-    padding-bottom: 30px;
-}
