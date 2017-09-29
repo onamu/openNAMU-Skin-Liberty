@@ -657,3 +657,7 @@ caption {
     caption-side: top;
 }
 /* 부트스트랩 커스텀 End*/
+
+.liberty-content-main.wiki-article {
+    padding-bottom: 30px;
+}
