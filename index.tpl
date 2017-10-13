@@ -1,18 +1,18 @@
 <html>
     <head>
         <title>{{imp[0]}} - {{imp[1]}}</title>
-        <link rel="stylesheet" href="/views/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/views/css/default.css">
-        <link rel="stylesheet" href="/views/css/default_mobile.css">
-        <link rel="stylesheet" href="/views/css/jquery-ui.min.css">
-        <link rel="stylesheet" href="/views/css/awesome/font-awesome.min.css">
+        <link rel="stylesheet" href="/views/liberty/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/views/liberty/css/default.css">
+        <link rel="stylesheet" href="/views/liberty/css/default_mobile.css">
+        <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="/views/liberty/css/awesome/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
-        <link rel="stylesheet" href="/views/css/style.css">
-        <link rel="shortcut icon" href="/views/img/on.ico">
+        <link rel="stylesheet" href="/views/liberty/css/style.css">
+        <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript" src="/views/js/lib/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="/views/js/lib/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/views/js/layout.js"></script>
+        <script type="text/javascript" src="/views/liberty/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/views/liberty/js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/views/liberty/js/layout.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
@@ -23,7 +23,7 @@
         <meta name="twitter:title" content="{{imp[0]}}">
         <meta name="twitter:site" content="@{{imp[1]}}">
         <meta name="twitter:card" content="summary">
-        <link rel="shortcut icon" href="/views/img/on.ico">
+        <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             function folding(num) {
@@ -144,7 +144,7 @@
                         {{!imp[2]}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/img/on2.png" width="100px"></a> <a href="/views/license.html">리버티 스킨</a>
+                        <a href="https://github.com/2DU/openNAMU"><img src="/views/liberty/img/on2.png" width="100px"></a> <a href="/views/liberty/license.html">리버티 스킨</a>
                     </div>
                 </div>
             </div>
