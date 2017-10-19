@@ -147,7 +147,7 @@
 /* Max-width: 397px 대형폰 이하 시작 부분 */
 @media (max-width: 397px) {
     .Liberty .nav-wrapper .navbar .navbar-brand {
-        width: 5rem;
+        width: auto;
     }
 
     .Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link::after {
