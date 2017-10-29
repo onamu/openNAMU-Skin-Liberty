@@ -23,7 +23,6 @@
         <meta name="twitter:title" content="{{imp[0]}}">
         <meta name="twitter:site" content="@{{imp[1]}}">
         <meta name="twitter:card" content="summary">
-        <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             function folding(num) {
