@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>{{imp[0]}} - {{imp[1]}}</title>
+        <meta charset="utf-8">
+        <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/liberty/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/views/liberty/css/default.css">
         <link rel="stylesheet" href="/views/liberty/css/default_mobile.css">
@@ -17,11 +18,11 @@
         <script>hljs.initHighlightingOnLoad();</script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['[math]', '[/math]']]}});</script>
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
-        <style>{{!imp[4]}}</style>
-        <script>{{!imp[5]}}</script>
-        <meta name="twitter:creator" content="@{{imp[1]}}">
+        <style>{{!imp[2][0]}}</style>
+        <script>{{!imp[2][1]}}</script>
+        <meta name="twitter:creator" content="@{{imp[1][0]}}">
         <meta name="twitter:title" content="{{imp[0]}}">
-        <meta name="twitter:site" content="@{{imp[1]}}">
+        <meta name="twitter:site" content="@{{imp[1][0]}}">
         <meta name="twitter:card" content="summary">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
@@ -42,7 +43,7 @@
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand" href="/">{{imp[1]}}</a>
+                <a class="navbar-brand" href="/">{{imp[1][0]}}</a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/recent_changes"><span class="fa fa-refresh"></span><span class="hide-title">최근 변경</span></a>
@@ -55,9 +56,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user">
-                            % if(imp[3] == 1):
+                            % if(imp[2][2] == 1):
                                 <span class="fa fa-user"></span>
-                            % elif(imp[3] == 0):
+                            % elif(imp[2][2] == 0):
                                 <span class="fa fa-user-times"></span>
                             % else:
                                 <span class="fa fa-user-secret"></span>
@@ -129,8 +130,8 @@
                     <div class="title">
                         <h1 id="main_title">
                             {{imp[0]}}
-                            % if(not imp[6] == 0):
-                                <sub>{{imp[6]}}</sub>
+                            % if(imp[3][0] != 0):
+                                <sub>{{imp[3][0]}}</sub>
                             % end
                         </h1>
                     </div>
@@ -140,7 +141,7 @@
                 </div>
                 <div class="liberty-footer" id="bottom">
                     <p>
-                        {{!imp[2]}}
+                        {{!imp[1][1]}}
                     </p>
                     <div id="powered">
                         <a href="https://github.com/2DU/openNAMU"><img src="/views/liberty/img/on2.png" width="100px"></a> <a href="/views/liberty/license.html">리버티 스킨</a>
