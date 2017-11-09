@@ -43,7 +43,7 @@
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand" href="/">{{imp[1][0]}}</a>
+                <a class="navbar-brand" href="/">{{!imp[1][0]}}</a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/recent_changes"><span class="fa fa-refresh"></span><span class="hide-title">최근 변경</span></a>
