@@ -18,15 +18,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
         <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['[math]', '[/math]']]}});</script>
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
-        <style>{{!imp[1][2]}}</style>
-        <script>{{!imp[1][3]}}</script>
-        <style>{{!imp[2][0]}}</style>
-        <script>{{!imp[2][1]}}</script>
-        <meta name="twitter:creator" content="@{{imp[1][0]}}">
-        <meta name="twitter:title" content="{{imp[0]}}">
-        <meta name="twitter:site" content="@{{imp[1][0]}}">
-        <meta name="twitter:card" content="summary">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>
             function folding(num) {
                 var fol = document.getElementById('folding_' + num);
@@ -41,6 +32,13 @@
                 }
             }
         </script>
+        {{!imp[1][5]}}
+        {{!imp[2][3]}}
+        <meta name="twitter:creator" content="@{{imp[1][0]}}">
+        <meta name="twitter:title" content="{{imp[0]}}">
+        <meta name="twitter:site" content="@{{imp[1][0]}}">
+        <meta name="twitter:card" content="summary">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
