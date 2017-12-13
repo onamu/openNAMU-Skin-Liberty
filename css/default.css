@@ -13,21 +13,18 @@ input:hover, button:hover, select:hover {
 
 html {
     font-size: 15px;
-    font-smoothing: antialiased;
 }
 
 body {
     font-size: 0.95rem;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Nanum Gothic", "KoPubDotum M", "Noto Sans Korean", "Noto Sans", "Malgun Gothic", "맑은 고딕", sans-serif;
-    margin: 0;
+body, h1, h2, h3, h4, h5, h6, b {
+    font-family: "나눔고딕", "Nanum Gothic", "Noto Sans Korean", "Noto Sans", "Malgun Gothic", "맑은 고딕", "sans-serif";
 }
 
-h1, h2, h3, h4, h5, h6, b {
-    font-family: "Nanum Gothic", "KoPubDotum B", "Noto Sans Korean", "Noto Sans", "Malgun Gothic", "맑은 고딕", sans-serif;
-
+body {
+    margin: 0;
 }
 
 input[type=password] {
