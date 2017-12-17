@@ -22,10 +22,6 @@ sub, sup {
     color: green;
 }
 
-.form-actions {
-    float: right;
-}
-
 .hljs {
     background: #f5f8fa;
 }
