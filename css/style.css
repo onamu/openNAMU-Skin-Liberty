@@ -152,6 +152,7 @@ div.scroll-buttons a {
     text-align: center;
     background: rgba(26,26,26,0.9);
     border-bottom: 0;
+    color: white;
 }
 
 #footnote-list {
