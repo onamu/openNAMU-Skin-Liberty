@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         <link rel="stylesheet" href="/views/liberty/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/views/liberty/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="/views/liberty/css/default.css">
         <link rel="stylesheet" href="/views/liberty/css/default_mobile.css">
         <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css">
-        <link rel="stylesheet" href="/views/liberty/css/awesome/font-awesome.min.css">
         <link rel="stylesheet" href="/views/liberty/css/style.css">
         <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
