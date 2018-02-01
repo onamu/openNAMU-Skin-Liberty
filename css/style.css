@@ -49,16 +49,6 @@ select {
     border-radius: .25rem;
 }
 
-#preview {
-    background: #37b1e3;
-    color: white;
-    border: 0;
-}
-
-#preview:hover {
-    background: #2b90ba;
-}
-
 input {
     border: 1px solid #e1e8ed;
     padding: 5px;
@@ -282,4 +272,51 @@ input {
 
 input[type="checkbox"] {
     width: auto;
+}
+
+button {
+    border: 1px solid #aaa;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    background: white;
+}
+
+button:hover {
+    background-color: white;
+}
+
+button#save {
+    background-color: #0275d8;
+    border-color: #0275d8;
+    color: white;
+    font-weight: bold;
+}
+
+button#save:hover {
+    background-color: #025aa5;
+    border-color:#025aa5;
+}
+
+button#preview {
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+    color: white;
+}
+
+button#preview:hover {
+    background-color: #31b0d5;
+    border-color: #31b0d5;
+    color: white;
+}
+
+button#come {
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    color: white;
+}
+
+button#come:hover {
+    background-color: #ec971f;
+    border-color: #ec971f;
+    color: white;
 }
