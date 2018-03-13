@@ -74,6 +74,8 @@ button#searchSearchButton {
 h1#main_title {
     margin-bottom: 0;
     margin-top: 0;
+    padding-bottom: none;
+    border-bottom: none;
 }
 
 a.navbar-brand {
@@ -132,7 +134,6 @@ s:hover, strike:hover, del:hover {
 
 div.scroll-buttons a {
     display: inline-block;
-    float: left;
     width: 42px;
     height: 42px;
     padding: 5px 8px 9px 8px;
@@ -220,15 +221,15 @@ textarea {
     width: 100%;
 }
 
-a.not_thing {
+#not_thing {
     color: #bf4c4c;
 }
 
-a.out_link {
+#out_link {
     color: #008000;
 }
 
-a.out_link::before {
+#out_link::before {
     padding: 0px;
     background: transparent;
     color: green;
@@ -259,6 +260,8 @@ a.out_link::before {
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
     margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar-brand {
@@ -319,4 +322,12 @@ button#come:hover {
     background-color: #ec971f;
     border-color: #ec971f;
     color: white;
+}
+
+.scroll-toc {
+    margin-right: -8px;
+}
+
+#left {
+    margin-right: -8px;
 }
