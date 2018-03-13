@@ -14,8 +14,8 @@
         <script type="text/javascript" src="/views/liberty/js/lib/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/views/liberty/js/lib/bootstrap.min.js"></script>
         <script type="text/javascript" src="/views/liberty/js/layout.js"></script>
-        {{!imp[1][5]}}
-        {{!imp[2][3]}}
+        {{imp[1][5]|safe}}
+        {{imp[2][3]|safe}}
         <meta name="twitter:creator" content="@{{imp[1][0]}}">
         <meta name="twitter:title" content="{{imp[0]}}">
         <meta name="twitter:site" content="@{{imp[1][0]}}">
@@ -25,7 +25,7 @@
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand" href="/">{{!imp[1][4]}}</a>
+                <a class="navbar-brand" href="/">{{imp[1][4]|safe}}</a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/recent_changes"><span class="fa fa-refresh"></span><span class="hide-title">최근 변경</span></a>
@@ -38,13 +38,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/user">
-                            % if(imp[2][2] == 1):
+                            {% if imp[2][2] == 1 %}
                                 <span class="fa fa-user"></span>
-                            % elif(imp[2][2] == 0):
+                            {% elif imp[2][2] == 0 %}
                                 <span class="fa fa-user-times"></span>
-                            % else:
+                            {% else %}
                                 <span class="fa fa-user-secret"></span>
-                            % end
+                            {% endif %}
                             <span class="hide-title">사용자</span>
                         </a>
                     </li>
@@ -71,59 +71,56 @@
         <div class="content-wrapper">
             <div class="container-fluid liberty-content">
                 <div class="liberty-content-header">
-                    % if(not menu == 0):
+                    {% if not menu == 0 %}
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
-                            % i = 1
-                                % for sub_d in menu:
-                                    % if(i > 5 or i < 0):
-                                        % if(i > 5):
+                                {% for sub_d in menu %}
+                                    {% if loop.index > 5 %}
+                                        {% if loop.index == 6 %}
                                             <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                 <span class="caret"></span>
                                             </button>
                                             <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                            % i = -100
-                                        % end
-                                        % if(sub_d[1] == 1):
+                                            {% set i = 0 %}
+                                        {% endif %}
+                                        {% if sub_d[1] == 1 %}
                                             <a class="dropdown-item" href="/{{sub_d[0]}}" id="open">토론</a>
-                                        % elif(sub_d[1] == 0):
+                                        {% elif sub_d[1] == 0 %}
                                             <a class="dropdown-item" href="/{{sub_d[0]}}">토론</a>
-                                        % else:
+                                        {% else %}
                                             <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                                        % end
-                                    % else:
-                                        % i += 1
-                                        % if(sub_d[1] == 1):
+                                        {% endif %}
+                                    {% else %}
+                                        {% if sub_d[1] == 1 %}
                                             <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="open">토론</a>
-                                        % elif(sub_d[1] == 0):
+                                        {% elif sub_d[1] == 0 %}
                                             <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">토론</a>
-                                        % else:
+                                        {% else %}
                                             <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                                        % end
-                                    % end
-                                % else:
-                                    % if(i < 0):
+                                        {% endif %}
+                                    {% endif %}
+                                    {% if not menu[loop.index] %}
                                         </div>
-                                    % end
-                                % end
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
-                    % end
+                    {% endif %}
                     <div class="title">
                         <h1 id="main_title">
                             {{imp[0]}}
-                            % if(imp[3][0] != 0):
+                            {% if imp[3][0] != 0 %}
                                 <sub>{{imp[3][0]}}</sub>
-                            % end
+                            {% endif %}
                         </h1>
                     </div>
                 </div>
                 <div class="liberty-content-main wiki-article">
-                    {{!data}}
+                    {{data|safe}}
                 </div>
                 <div class="liberty-footer" id="bottom">
                     <p>
-                        {{!imp[1][1]}}
+                        {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
                         <a href="https://github.com/2DU/openNAMU"><img src="/views/liberty/img/on2.png" width="100px"></a> <a href="/views/liberty/license.html">리버티 스킨</a>
