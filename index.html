@@ -75,8 +75,8 @@
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
                                 {% for sub_d in menu %}
-                                    {% if loop.index > 5 %}
-                                        {% if loop.index == 6 %}
+                                    {% if loop.index > 4 %}
+                                        {% if loop.index == 5 %}
                                             <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                 <span class="caret"></span>
                                             </button>
@@ -99,7 +99,7 @@
                                             <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                         {% endif %}
                                     {% endif %}
-                                    {% if not menu[loop.index] %}
+                                    {% if not menu[loop.index] and loop.index > 4 %}
                                         </div>
                                     {% endif %}
                                 {% endfor %}
