@@ -83,21 +83,9 @@
                                             <div class="dropdown-menu dropdown-menu-right" role="menu">
                                             {% set i = 0 %}
                                         {% endif %}
-                                        {% if sub_d[1] == 1 %}
-                                            <a class="dropdown-item" href="/{{sub_d[0]}}" id="open">토론</a>
-                                        {% elif sub_d[1] == 0 %}
-                                            <a class="dropdown-item" href="/{{sub_d[0]}}">토론</a>
-                                        {% else %}
-                                            <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                                        {% endif %}
+                                        <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                     {% else %}
-                                        {% if sub_d[1] == 1 %}
-                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="open">토론</a>
-                                        {% elif sub_d[1] == 0 %}
-                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">토론</a>
-                                        {% else %}
-                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                                        {% endif %}
+                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                     {% endif %}
                                     {% if not menu[loop.index] and loop.index > 4 %}
                                         </div>
