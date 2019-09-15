@@ -293,3 +293,7 @@ button#come:hover {
 #left {
     margin-right: -8px;
 }
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: absolute;
+}
