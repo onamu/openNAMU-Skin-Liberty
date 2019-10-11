@@ -30,13 +30,6 @@ sub, sup {
     margin-bottom: -20px;
 }
 
-#cate {
-    width: 100%;
-    border: 1px solid #777;
-    padding: 5px;
-    margin-top: 1em;
-}
-
 select {
     display: inline-block;
     padding: 0.2rem 0.4rem;
@@ -296,4 +289,15 @@ button#come:hover {
 
 .navbar-fixed-bottom, .navbar-fixed-top {
     position: absolute;
+}
+
+#cate, #redirect {
+    border: 1px solid #e1e8ed;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    box-shadow: 0.15rem 0.15rem 0 0 #cfdae2;
+    margin-bottom: 0.8rem;
+    border-radius: 0.35rem;
+    display: inline-block;
+    width: 100%;
 }

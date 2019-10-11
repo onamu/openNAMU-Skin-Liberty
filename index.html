@@ -43,11 +43,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/user">
                             {% if imp[2][2] == 1 %}
-                                <span class="fa fa-user"></span>
-                            {% elif imp[2][2] == 0 %}
-                                <span class="fa fa-user-times"></span>
+                                {% if imp[2][8] != 0 %}
+                                    <span class="fa fa-user-secret"></span>
+                                {% else %}
+                                    <span class="fa fa-user"></span>
+                                {% endif %}
                             {% else %}
-                                <span class="fa fa-user-secret"></span>
+                                <span class="fa fa-user-times"></span>
                             {% endif %}
                             <span class="hide-title">{{imp[2][5]}}</span>
                         </a>
