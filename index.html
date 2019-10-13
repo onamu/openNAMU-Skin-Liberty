@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <title>{{imp[0]}} - {{imp[1][0]}}</title>
         {{imp[3][3]|safe}}
-        <link rel="stylesheet" href="/views/liberty/css/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/views/liberty/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/views/liberty/css/default.css">
-        <link rel="stylesheet" href="/views/liberty/css/default_mobile.css">
-        <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css">
-        <link rel="stylesheet" href="/views/liberty/css/style.css">
+        <link rel="stylesheet" href="/views/liberty/css/font-awesome/css/font-awesome.min.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/bootstrap.min.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/default.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/default_mobile.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=1">
         <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script type="text/javascript" src="/views/liberty/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/views/liberty/js/layout.js"></script>
+        <script type="text/javascript" src="/views/liberty/js/jquery-ui.min.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/layout.js?ver=1"></script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         <meta name="twitter:creator" content="@{{imp[1][0]}}">
@@ -91,7 +91,11 @@
                                         {% endif %}
                                         <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                     {% else %}
-                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="topic_color">{{sub_d[1]}}</a>
+                                        {% else %}
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        {% endif %}
                                     {% endif %}
                                     {% if not menu[loop.index] and loop.index > 4 %}
                                         </div>

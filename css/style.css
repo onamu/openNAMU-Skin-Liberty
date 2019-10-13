@@ -301,3 +301,11 @@ button#come:hover {
     display: inline-block;
     width: 100%;
 }
+
+#topic_color {
+    background-color: #bbeabb;
+}
+
+#topic_color:hover {
+    background-color: #4188f1;
+}
