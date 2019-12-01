@@ -156,26 +156,6 @@ div.scroll-buttons {
     margin-top: 5px;
 }
 
-#toron {
-    width: 100%;
-}
-
-#toron_color_green {
-    background-color: #B0D3AD;
-}
-
-#toron_color_red {
-    background-color: #f3c2c2;
-}
-
-#toron_color_blue {
-    background: #c1ebff;
-}
-
-#toron_color {
-    background-color: #d5d5d5;
-}
-
 @media (max-width: 768px) {
     table {
         min-width: 100%;
