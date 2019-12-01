@@ -202,15 +202,6 @@ textarea {
     font-family: FontAwesome;
 }
 
-.Liberty .nav-wrapper .navbar, .Liberty .content-wrapper {
-    max-width: 1024px;
-}
-
-.Liberty .content-wrapper .liberty-content {
-    margin: auto;
-    margin-right: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -308,4 +299,16 @@ button#come:hover {
 
 #topic_color:hover {
     background-color: #4188f1;
+}
+
+li.nav-item {
+    margin: 0;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed {
+    position: absolute;
+}
+
+ul#live-recent-list li {
+    margin: 0;
 }

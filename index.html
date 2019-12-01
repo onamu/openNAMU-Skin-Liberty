@@ -9,12 +9,13 @@
         <link rel="stylesheet" href="/views/liberty/css/default.css?ver=1">
         <link rel="stylesheet" href="/views/liberty/css/default_mobile.css?ver=1">
         <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
-        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=2">
         <link rel="shortcut icon" href="/views/liberty/img/on.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="/views/liberty/js/jquery-ui.min.js?ver=1"></script>
         <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js?ver=1"></script>
         <script type="text/javascript" src="/views/liberty/js/layout.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/live_Recents.js?ver=1"></script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         <meta name="twitter:creator" content="@{{imp[1][0]}}">
@@ -75,14 +76,44 @@
             <a class="scroll-bottom" href="#powered" id="right"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
         </div>
         <div class="content-wrapper">
+            <div class="liberty-sidebar">
+                <div class="liberty-right-fixed">
+                    <div class="live-recent">
+                        <div class="live-recent-header">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="liberty-recent-tab1">최근바뀜</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="live-recent-content">
+                            <ul class = "live-recent-list" id="live-recent-list">
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                            </ul>
+                        </div>
+                        <div class="live-recent-footer">
+                            <a href="/recent_changes" title="최근 변경내역"><span class="label label-info">더보기</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container-fluid liberty-content">
                 <div class="liberty-content-header">
                     {% if not menu == 0 %}
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
                                 {% for sub_d in menu %}
-                                    {% if loop.index > 4 %}
-                                        {% if loop.index == 5 %}
+                                    {% if loop.index > 5 %}
+                                        {% if loop.index == 6 %}
                                             <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                 <span class="caret"></span>
                                             </button>
@@ -97,7 +128,7 @@
                                             <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                         {% endif %}
                                     {% endif %}
-                                    {% if not menu[loop.index] and loop.index > 4 %}
+                                    {% if not menu[loop.index] and loop.index > 5 %}
                                         </div>
                                     {% endif %}
                                 {% endfor %}
