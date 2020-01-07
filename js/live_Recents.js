@@ -12,7 +12,7 @@ function ShowAjaxRecentList(parent) {
 			var html = "";
 			for(var i = 0 ; i < res.length && i < 10 ; i++) {
 				var item = res[i];
-				console.log(item);
+				
         		html += '<li><a class="recent-item" href = "/w/' + encodeURIComponent(item[1]) + '" title="' + item[1] +'">';
 				html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
 				var text = item[1];
