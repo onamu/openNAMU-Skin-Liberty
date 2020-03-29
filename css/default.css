@@ -20,7 +20,7 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6, b {
-    font-family: "나눔고딕", "Nanum Gothic", "Noto Sans Korean", "Noto Sans", "Malgun Gothic", "맑은 고딕", "sans-serif";
+    font-family: 'Noto Sans KR','Noto Sans','Noto Sans CJK KR','Spoqa Han Sans','NanumBarunGothic','Nanum Gothic','KoPub Dotum','Malgun Gothic','맑은 고딕', sans-serif;
 }
 
 body {
