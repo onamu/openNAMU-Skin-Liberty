@@ -42,9 +42,15 @@
                         <a class="nav-link" href="/random"><span class="fa fa-random"></span><span class="hide-title">{{'random'|load_lang}}</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/other"><span class="fa fa-wrench"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/skin_set"><span class="fa fa-cog"></span></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/user">
                             {% if imp[2][2] == 1 %}
-                                {% if imp[2][8] != 0 %}
+                                {% if imp[2][8] != '0' %}
                                     <span class="fa fa-user-secret"></span>
                                 {% else %}
                                     <span class="fa fa-user"></span>
@@ -54,9 +60,6 @@
                             {% endif %}
                             <span class="hide-title">{{imp[2][5]}}</span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/other"><span class="fa fa-cogs"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
                     </li>
                 </ul>
                 <form method="post" action="/search" id="searchform" class="form-inline">
