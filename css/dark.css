@@ -114,20 +114,7 @@ div#bottom a {
     color: #E69720;
 }
 
-input, textarea, select {
-    background-color: black;
-    color: #ddd;
-}
-
-input::placeholder, textarea::placeholder, select::placeholder {
-    color: #ddd;
-}
-
 table {
-    background-color: black;
-}
-
-button {
     background-color: black;
 }
 
@@ -141,9 +128,4 @@ button:hover {
 
 #topic_color:hover {
     background-color: #023e98;
-}
-
-.spead_footnote {
-    background-color: black;
-    color: #ddd;
 }

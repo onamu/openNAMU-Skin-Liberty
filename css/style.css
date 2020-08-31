@@ -26,10 +26,6 @@ sub, sup {
     background: #f5f8fa;
 }
 
-#syntax {
-    margin-bottom: -20px;
-}
-
 select {
     display: inline-block;
     padding: 0.2rem 0.4rem;
