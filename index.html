@@ -54,12 +54,12 @@
                 </ul>
                 <div class="navbar-login">
                     {% if imp[2][2] == 0 %}
-                        <a href="/user" class="none-outline">
+                        <a href="/user" title="{{imp[2][5]}}" class="none-outline">
                             <span class="fa fa-sign-in"></span>
                         </a>
                     {% else %}
                         <div class="dropdown login-menu">
-                            <a href="/user">
+                            <a href="/user" title="{{imp[2][5]}}">
                                 {% if imp[2][4] != '' %}
                                     <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
                                 {% else %}
@@ -159,6 +159,10 @@
                 </div>
                 <div class="liberty-footer" id="bottom">
                     <p>
+                        {% if imp[3][1] != 0 %}
+                            {{'last_edit_time'|load_lang}} : {{imp[3][1]}}
+                            <br>
+                        {% endif %}
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
