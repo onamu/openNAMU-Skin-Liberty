@@ -77,16 +77,7 @@ img, iframe {
 }
 
 blockquote {
-    padding:1em calc(2em + 25px) 1em 1em;
-    margin:1em 0em 0em;
-    background:#eeeeee;
-    display:table;
-    border:2px dashed #ccc;
-    border-left:5px solid #4188F1;
-    background-image: url('/views/main_css/file/quote.png');
-    background-position:calc(100% - 10px) 10px;
-    background-repeat:no-repeat;
-    background-size:25px;
+    border-left: 5px solid #4188F1;
 }
 
 td {
