@@ -260,14 +260,6 @@ button#come:hover {
     width: 100%;
 }
 
-#topic_color {
-    background-color: #bbeabb;
-}
-
-#topic_color:hover {
-    background-color: #4188f1;
-}
-
 li.nav-item {
     margin: 0;
 }
