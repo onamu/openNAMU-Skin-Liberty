@@ -16,7 +16,7 @@ function main_load() {
         cookies.match(regex_data('main_css_darkmode'))[1] === '1'
     ) {
         head_data.innerHTML += '' +
-            '<link rel="stylesheet" href="/views/liberty/css/dark.css?ver=2">' +
+            '<link rel="stylesheet" href="/views/liberty/static/css/dark.css?ver=3">' +
         '';
     }
 }
