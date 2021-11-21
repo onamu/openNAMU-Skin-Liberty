@@ -2,48 +2,29 @@
 <html>
     <head>
         <meta charset="utf-8">
-        {% if imp[3][0] != 0 %}
-            <title>{{imp[0]}} {{imp[3][0]}} - {{imp[1][0]}}</title>
-        {% else %}
-            <title>{{imp[0]}} - {{imp[1][0]}}</title>
-        {% endif %}
-        <link   href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean"
-                rel="stylesheet">
-        <link   rel="stylesheet" 
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
-                integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
-                crossorigin="anonymous" 
-                referrerpolicy="no-referrer">
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-                crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-                integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-                crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-                crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <title>{{imp[0]}} - {{imp[1][0]}}</title>
+        <link rel="stylesheet" href="/views/liberty/css/font-awesome/css/font-awesome.min.css?ver=1">
         <link rel="stylesheet" href="/views/liberty/css/bootstrap.min.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/default.css?ver=2">
+        <link rel="stylesheet" href="/views/liberty/css/default_mobile.css?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
         {{imp[3][3]|safe}}
-        <link rel="stylesheet"         href="/views/liberty/css/default.css?ver=5">
-        <link rel="stylesheet"         href="/views/liberty/css/default_mobile.css?ver=5">
-        <link rel="stylesheet"         href="/views/liberty/css/style.css?ver=10">
-        <script type="text/javascript" src="/views/liberty/js/liberty.js?ver=10"></script>
-        <script type="text/javascript" src="/views/liberty/js/skin_set.js?ver=10"></script>
-        <script>main_load(); window.addEventListener('DOMContentLoaded', skin_set);</script>
-        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico?ver=1">
+        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=6">
+        <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
+        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="/views/liberty/js/jquery-ui.min.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/layout.js?ver=1"></script>
+        <script type="text/javascript" src="/views/liberty/js/live_Recents.js?ver=2"></script>
+        <script type="text/javascript" src="/views/liberty/js/skin_set.js?ver=5"></script>
+        <script>main_load(); window.addEventListener('DOMContentLoaded', function() { skin_set(); });</script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
-        {% if imp[3][0] != 0 %}
-            <meta name="title" content="{{imp[0]}}{{imp[3][0]}} - {{imp[1][0]}}">
-        {% else %}
-            <meta name="title" content="{{imp[0]}} - {{imp[1][0]}}">
-        {% endif %}
-        <meta name="keywords" content="{{imp[0]}}">
-        {% if imp[2][12] != 0 and imp[2][12] == 'w' %}
-            <meta name="description" content="{{data|cut_100}}">
-        {% endif %}
+        <meta name="twitter:creator" content="@{{imp[1][0]}}">
+        <meta name="twitter:title" content="{{imp[0]}}">
+        <meta name="twitter:site" content="@{{imp[1][0]}}">
+        <meta name="twitter:card" content="summary">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body class="Liberty">
@@ -111,22 +92,26 @@
                         <div class="live-recent-header">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                    <a href="javascript:liberty_side_load('A');" class="nav-link active" id="liberty-recent-tab1">{{'recent_change'|load_lang}}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="javascript:liberty_side_load('B');" class="nav-link" id="liberty-recent-tab2">{{'recent_discussion'|load_lang}}</a>
+                                    <a class="nav-link active" id="liberty-recent-tab1">{{'recent_change'|load_lang}}</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="live-recent-content">
-                            <ul class="live-recent-list" id="live-recent-list">
-                                {% for i in range(10) %}
-                                    <li><span class="recent-item">&nbsp;</span></li>
-                                {% endfor %}
+                            <ul class = "live-recent-list" id="live-recent-list">
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
+                                <li><span class="recent-item">&nbsp;</span></li>
                             </ul>
                         </div>
                         <div class="live-recent-footer">
-                            <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}"><span class="label label-info">More</span></a>
+                            <a href="/recent_changes" title="{{'recent_change'|load_lang}}"><span class="label label-info">More</span></a>
                         </div>
                     </div>
                 </div>
