@@ -4,7 +4,7 @@ let liberty_load_type = 'A';
 
 //매개 변수 parent는 ul태그여야 합니다
 function ShowAjaxRecentList(parent) {
-    function temp() {
+	function temp() {
         if(liberty_load_type === 'A') {
             jQuery.ajax({
                 url: "/api/recent_changes", // 호출 URL
@@ -54,20 +54,20 @@ function ShowAjaxRecentList(parent) {
                 }
             });
         }
-    }
-    temp();
+	}
+	temp();
 }
 
 function liberty_side_load(get_type) {
     liberty_load_type = get_type;
     if(get_type === 'A') {
         $( this ).addClass( 'active' );
-        $( '#liberty-recent-tab2' ).removeClass( 'active' );
+		$( '#liberty-recent-tab2' ).removeClass( 'active' );
         
         document.getElementById('liberty_recent_link').href = "/recent_changes";
     } else {
         $( this ).addClass( 'active' );
-        $( '#liberty-recent-tab1' ).removeClass( 'active' );
+		$( '#liberty-recent-tab1' ).removeClass( 'active' );
         
         document.getElementById('liberty_recent_link').href = "/recent_discuss"
     }
@@ -80,39 +80,39 @@ function liberty_side_load(get_type) {
  */
 var recentIntervalHandle = null;
 jQuery( function ( jQuery ) {
-    var width = jQuery(window).width();
-    if(width > 1023) {
-        isAllowRequestList = true;
-        ShowAjaxRecentList(jQuery("#live-recent-list"));
-    }
-    else {
-        isAllowRequestList = false;
-    }
+	var width = jQuery(window).width();
+	if(width > 1023) {
+		isAllowRequestList = true;
+		ShowAjaxRecentList(jQuery("#live-recent-list"));
+	}
+	else {
+		isAllowRequestList = false;
+	}
 
-    //만약에 화면의 사이즈가 작아 최근 변경글이 안보일 시, 갱신을 하지 않는다.
-    jQuery(window).resize(recentIntervalCheck);
+	//만약에 화면의 사이즈가 작아 최근 변경글이 안보일 시, 갱신을 하지 않는다.
+	jQuery(window).resize(recentIntervalCheck);
 });
 
 var recentIntervalCheck = function() {
-    var width = jQuery(window).width();
-    if(width <= 1023) {
-        if(recentIntervalHandle != null) {
-            clearInterval(recentIntervalHandle);
-            recentIntervalHandle = null;
-        }
-        isAllowRequestList = false;
-    } else {
-        if(recentIntervalHandle == null) {
-            recentIntervalHandle = setInterval(function() {
-                ShowAjaxRecentList(jQuery("#live-recent-list"));
-            }, 60 * 1000);
-        }
-        isAllowRequestList = true;
-    }
+	var width = jQuery(window).width();
+	if(width <= 1023) {
+		if(recentIntervalHandle != null) {
+			clearInterval(recentIntervalHandle);
+			recentIntervalHandle = null;
+		}
+		isAllowRequestList = false;
+	} else {
+		if(recentIntervalHandle == null) {
+			recentIntervalHandle = setInterval(function() {
+				ShowAjaxRecentList(jQuery("#live-recent-list"));
+			}, 60 * 1000);
+		}
+		isAllowRequestList = true;
+	}
 }
 
 jQuery(document).ready(function(jQuery) {
-    recentIntervalCheck();
+	recentIntervalCheck();
 });
 
 /* 드롭다운 페이드인 */
