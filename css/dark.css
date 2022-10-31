@@ -83,10 +83,6 @@ ul#live-recent-list {
     background-color: black;
 }
 
-.liberty-content-main.wiki-article a {
-    color: #E69720;
-}
-
 .w[data-v-ce090af2] del {
     color: #aaa;
 }
@@ -120,4 +116,17 @@ table {
 
 button:hover {
     background-color: #3c3c3c;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item .nav-link {
+    background-color: #1F2023;
+    color: #DDD;
+}
+
+.Liberty .content-wrapper .liberty-sidebar .liberty-right-fixed .live-recent .live-recent-header .nav .nav-item {
+    border-color: #555;
+}
+
+div.scroll-buttons a {
+    background-color: #1F2023;
 }

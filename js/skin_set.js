@@ -9,18 +9,6 @@ function get_post() {
     history.go(0);
 }
 
-function main_load() {
-    var head_data = document.querySelector('head');
-    if(
-        cookies.match(regex_data('main_css_darkmode')) &&
-        cookies.match(regex_data('main_css_darkmode'))[1] === '1'
-    ) {
-        head_data.innerHTML += '' +
-            '<link rel="stylesheet" href="/views/liberty/css/dark.css?ver=2">' +
-        '';
-    }
-}
-
 function regex_data(data) {
     return new RegExp('(?:^|; )' + data + '=([^;]*)');
 }

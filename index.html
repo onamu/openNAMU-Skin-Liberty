@@ -13,7 +13,10 @@
         <link rel="stylesheet" href="/views/liberty/css/default_mobile.css?ver=1">
         <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
         {{imp[3][3]|safe}}
-        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=7">
+        <link rel="stylesheet" href="/views/liberty/css/style.css?ver=8">
+        {% if request.cookies.get('main_css_darkmode', '') == '1' %}
+            <link rel="stylesheet" href="/views/liberty/css/dark.css?ver=3">
+        {% endif %}
         <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
         <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -21,7 +24,6 @@
         <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js?ver=1"></script>
         <script type="text/javascript" src="/views/liberty/js/layout.js?ver=3"></script>
         <script type="text/javascript" src="/views/liberty/js/skin_set.js?ver=5"></script>
-        <script>main_load(); window.addEventListener('DOMContentLoaded', function() { skin_set(); });</script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         {% if imp[3][0] != 0 %}
@@ -89,9 +91,9 @@
             </nav>
         </div>
         <div class="scroll-buttons">
-            <a class="scroll-toc" href="#toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
-            <a class="scroll-button" href="#" id="left"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-            <a class="scroll-bottom" href="#powered" id="right"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+            <a class="scroll-toc" href="#toc" id="scroll-button-toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+            <a class="scroll-button" href="#" id="scroll-button-left"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            <a class="scroll-bottom" href="#powered" id="scroll-button-right"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
         </div>
         <div class="content-wrapper">
             <div class="liberty-sidebar">
@@ -178,5 +180,6 @@
                 </div>
             </div>
         </div>
+        <script>window.addEventListener('DOMContentLoaded', skin_set);</script>
     </body>
 </html>
