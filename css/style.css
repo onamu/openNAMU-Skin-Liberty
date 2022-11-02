@@ -128,14 +128,6 @@ div.scroll-buttons a {
     border-left: 1px solid white;
 }
 
-#scroll-button-toc {
-    margin-right: -8px;
-}
-
-#scroll-button-left {
-    margin-right: -8px;
-}
-
 div.scroll-buttons {
     position: fixed;
 
@@ -273,4 +265,4 @@ ul#live-recent-list li {
     border-left: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0.35rem;
-} 
+}

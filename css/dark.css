@@ -130,3 +130,7 @@ button:hover {
 div.scroll-buttons a {
     background-color: #1F2023;
 }
+
+#toc-name, .opennamu_TOC_title {
+    background-color: #1f2023;
+}
