@@ -114,6 +114,12 @@ table {
     background-color: black;
 }
 
+button, select {
+    background-color: black;
+
+    color: white;
+}
+
 button:hover {
     background-color: #3c3c3c;
 }
