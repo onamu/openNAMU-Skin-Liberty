@@ -1,3 +1,7 @@
+:root {
+    --sub-color: #F74646;
+}
+
 .btn.btn-secondary.tools-btn.dropdown-toggle {
     height: 34px;
 }
