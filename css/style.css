@@ -1,3 +1,7 @@
+:root {
+    --sub-color: var(--sub-color);;
+}
+
 .btn.btn-secondary.tools-btn.dropdown-toggle {
     height: 34px;
 }
@@ -19,7 +23,7 @@ select {
 }
 
 input {
-    border: 1px solid #e1e8ed;
+    border: 1px solid var(--sub-color);;
     padding: 5px;
     border-radius: 3px;
 }
@@ -65,7 +69,7 @@ pre {
 }
 
 #toc, .opennamu_TOC {
-    border: 1px solid #e1e8ed;
+    border: 1px solid var(--sub-color);;
 
     border-top-right-radius: 0.35rem;
     border-top-left-radius: 0.35rem;
@@ -94,7 +98,7 @@ pre {
     
     background-color: #f5f8fa;
     
-    border: 1px solid #e1e8ed;
+    border: 1px solid var(--sub-color);;
     border-top-right-radius: 0.35rem;
     border-top-left-radius: 0.35rem;
 }
@@ -223,7 +227,7 @@ button#come:hover {
 }
 
 #cate, .opennamu_category, #redirect {
-    border: 1px solid #e1e8ed;
+    border: 1px solid var(--sub-color);;
     border-radius: 0.35rem;
 
     padding: 0.4rem;
