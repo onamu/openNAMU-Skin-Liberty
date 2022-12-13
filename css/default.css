@@ -1,7 +1,7 @@
 /* 색을 바꾸고 싶으시다면 :root 밑에 있는 사용자 지정 CSS 속성을 변경하세요. */
 :root {
     --main-color: #4188f1;
-    --border-color: var(--border-color);;
+    --border-color: #e1e8ed;
 }
 * {
     outline: none;
