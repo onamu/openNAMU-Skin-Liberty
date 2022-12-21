@@ -1,5 +1,5 @@
 :root {
-    --sub-color: var(--sub-color);
+    --sub-color: #e1e8ed;
 }
 
 .btn.btn-secondary.tools-btn.dropdown-toggle {
