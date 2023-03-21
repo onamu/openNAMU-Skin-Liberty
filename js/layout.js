@@ -16,18 +16,18 @@ function ShowAjaxRecentList(parent) {
 	function temp() {
         if(liberty_load_type === 'A') {
             jQuery.ajax({
-                url: "/api/recent_changes", // 호출 URL
+                url: "/api/recent_change/10", // 호출 URL
                 dataType:'json'
             }).done(function(res) {
                 var html = "";
-                for(var i = 0 ; i < res.length && i < 10 ; i++) {
+                for(var i = 0; i < res.length && i < 10; i++) {
                     var item = res[i];
 
                     html += '<li><a class="recent-item" href="/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
                     html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
                     var text = item[1];
                     if(text.length > 13) {
-                        text = text.substr(0,13);
+                        text = text.substr(0, 13);
                         text +="...";
                     }
                     html += text;
@@ -40,18 +40,18 @@ function ShowAjaxRecentList(parent) {
             });
         } else {
             jQuery.ajax({
-                url: "/api/recent_discuss", // 호출 URL
+                url: "/api/recent_discuss/10", // 호출 URL
                 dataType:'json'
             }).done(function(res) {
                 var html = "";
-                for(var i = 0 ; i < res.length && i < 10 ; i++) {
+                for(var i = 0; i < res.length && i < 10; i++) {
                     var item = res[i];
 
                     html += '<li><a class="recent-item" href="/thread/' + encodeURIComponent(item[3]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
                     html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
                     var text = item[1];
                     if(text.length > 13) {
-                        text = text.substr(0,13);
+                        text = text.substr(0, 13);
                         text +="...";
                     }
                     html += text;
