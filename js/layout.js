@@ -19,19 +19,23 @@ function ShowAjaxRecentList(parent) {
                 url: "/api/recent_change/10", // 호출 URL
                 dataType:'json'
             }).done(function(res) {
-                var html = "";
-                for(var i = 0; i < res.length && i < 10; i++) {
-                    var item = res[i];
-
-                    html += '<li><a class="recent-item" href="/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
-                    html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
-                    var text = item[1];
-                    if(text.length > 13) {
-                        text = text.substr(0, 13);
-                        text +="...";
+                let html = "";
+                for(let i = 0; i < res.length && i < 10; i++) {
+                    let item = res[i];
+                    
+                    if(item[6] === '') {
+                        html += '<li><a class="recent-item" href="/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
+                        html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
+                        let text = item[1];
+                        if(text.length > 13) {
+                            text = text.substr(0, 13);
+                            text +="...";
+                        }
+                        html += liberty_do_func_xss_encode(text);
+                        html += "</a></li>";
+                    } else {
+                        html += "<li>[---] ---</li>";
                     }
-                    html += text;
-                    html += "</a></li>"
                 }
                 
                 if(parent != null) {
@@ -43,19 +47,19 @@ function ShowAjaxRecentList(parent) {
                 url: "/api/recent_discuss/10", // 호출 URL
                 dataType:'json'
             }).done(function(res) {
-                var html = "";
-                for(var i = 0; i < res.length && i < 10; i++) {
-                    var item = res[i];
+                let html = "";
+                for(let i = 0; i < res.length && i < 10; i++) {
+                    let item = res[i];
 
                     html += '<li><a class="recent-item" href="/thread/' + encodeURIComponent(item[3]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
-                    html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
-                    var text = item[1];
+                    html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
+                    let text = item[1];
                     if(text.length > 13) {
                         text = text.substr(0, 13);
                         text +="...";
                     }
-                    html += text;
-                    html += "</a></li>"
+                    html += liberty_do_func_xss_encode(text);
+                    html += "</a></li>";
                 }
                 
                 if(parent != null) {
