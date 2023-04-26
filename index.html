@@ -80,21 +80,53 @@
                     {% endif %}
                 </ul>
                 <div class="navbar-login">
-                    {% if imp[2][2] == 0 %}
-                        <a href="/user" title="{{imp[2][5]}}" class="none-outline">
-                            <span class="fa fa-sign-in"></span>
+                    <div class="dropdown login-menu">
+                        <a type="button" id="login-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                            {% if imp[2][2] == 0 %}
+                                <span class="fa fa-sign-in" style="padding: 0; padding-top: 0.35rem;"></span>
+                            {% elif imp[2][4] != '' %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
+                            {% else %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
+                            {% endif %}
                         </a>
-                    {% else %}
-                        <div class="dropdown login-menu">
-                            <a href="/user" title="{{imp[2][5]}}">
-                                {% if imp[2][4] != '' %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
+                        <div aria-labelledby="login-menu" class="dropdown-menu dropdown-menu-right login-dropdown-menu">
+                            <a href="/user" class="dropdown-item">
+                                {% if imp[2][2] == 1 %}
+                                    <b>{{imp[2][5]}}</b>
                                 {% else %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
+                                    <b>{{imp[2][10]}}</b>
+                                {% endif %}
+                                <br>
+                                {% if imp[2][2] == 1 %}
+                                    {% if imp[2][6] == '1' %}
+                                        {% if 'owner' in imp[2][9] %}
+                                            {{'owner'|load_lang}}
+                                        {% else %}
+                                            {{'admin'|load_lang}}
+                                        {% endif %}
+                                    {% else %}
+                                        {{'member'|load_lang}}
+                                    {% endif %}
+                                {% else %}
+                                    {{'ip'|load_lang}}
                                 {% endif %}
                             </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/user" class="dropdown-item">{{'user_tool'|load_lang}}</a>
+                            <a href="/change" class="dropdown-item">{{'user_setting'|load_lang}}</a>
+                            <div class="dropdown-divider"></div>
+                            {% if imp[2][2] == 1 %}
+                                <a href="/alarm" class="dropdown-item">{{'alarm'|load_lang}} ({{imp[2][8]}})</a>
+                                <a href="/watch_list" class="dropdown-item">{{'watchlist'|load_lang}}</a>
+                                <a href="/star_doc" class="dropdown-item">{{'star_doc'|load_lang}}</a>
+                                <a href="/logout" class="dropdown-item">{{'logout'|load_lang}}</a>
+                            {% else %}
+                                <a href="/login" class="dropdown-item">{{'login'|load_lang}}</a>
+                                <a href="/register" class="dropdown-item">{{'register'|load_lang}}</a>
+                            {% endif %}
                         </div>
-                    {% endif %}
+                    </div>
                 </div>
                 <form method="post" action="/search" id="searchform" class="form-inline">
                     <div class="input-group">

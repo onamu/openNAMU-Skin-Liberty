@@ -64,10 +64,6 @@ td {
     padding: 0.3rem 0.6rem;
 }
 
-pre {
-    padding: 0;
-}
-
 #toc, .opennamu_TOC {
     border: 1px solid var(--sub-color);
 
