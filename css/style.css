@@ -106,7 +106,7 @@ div.scroll-buttons a {
     text-decoration: none;
     text-align: center;
     
-    background-color: #4188f1;
+    background-color: var(--main-color);
     border-bottom: 0;
 
     color: white;
