@@ -270,3 +270,7 @@ ul#live-recent-list li {
 th[rowspan], td[rowspan] {
     position: initial;
 }
+
+table {
+    background-color: transparent;
+}
