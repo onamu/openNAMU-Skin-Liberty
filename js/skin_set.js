@@ -20,17 +20,6 @@ function ringo_get_post() {
     history.go(0);
 }
 
-function ringo_do_skin_set() {
-    let cookies = document.cookie;
-    if(!cookies.match(ringo_do_regex_data('main_css_use_sys_darkmode')) || (cookies.match(ringo_do_regex_data('main_css_use_sys_darkmode')) && cookies.match(ringo_do_regex_data('main_css_use_sys_darkmode'))[1] === '1')) {
-        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.cookie = 'main_css_darkmode=1; path=/';
-        } else {
-            document.cookie = 'main_css_darkmode=0; path=/';
-        }
-    }
-}
-
 function ringo_load_skin_set() {
     let cookies = document.cookie;
     
@@ -77,5 +66,4 @@ function ringo_load_skin_set() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', ringo_do_skin_set);
 window.addEventListener('DOMContentLoaded', ringo_load_skin_set);
