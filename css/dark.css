@@ -6,7 +6,7 @@
     background-color: black;
 }
 
-.Liberty .content-wrapper .liberty-content .liberty-content-header .title>h1 {
+.Liberty .content-wrapper .liberty-content .liberty-content-header .title>h1, .title {
     color: #ddd;
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{'language_tag'|load_lang}}">
     <head>
-        <script src="/views/liberty/js/skin_set_do.js.cache_v1"></script>
+        <script src="/views/liberty/js/skin_set_do.js.cache_v2"></script>
 
         <meta charset="utf-8">
         {% if imp[3][0] != 0 %}
@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/views/liberty/css/style.css.cache_v10">
         {% if request.cookies.get('main_css_darkmode', '') == '1' %}
             {{imp[3][5]|safe}}
-            <link rel="stylesheet" href="/views/liberty/css/dark.css.cache_v5">
+            <link rel="stylesheet" href="/views/liberty/css/dark.css.cache_v6">
         {% endif %}
         <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
         <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
@@ -29,7 +29,7 @@
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
         
         <script defer src="/views/liberty/js/layout.js.cache_v3"></script>
-        <script defer src="/views/liberty/js/skin_set.js.cache_v7"></script>
+        <script defer src="/views/liberty/js/skin_set.js.cache_v8"></script>
         {{imp[1][5]|safe}}
         {{imp[2][3]|safe}}
         {% if imp[3][0] != 0 %}
@@ -217,6 +217,9 @@
                                 <sub>{{imp[3][0]}}</sub>
                             {% endif %}
                         </h1>
+                        {% if imp[3][1] != 0 %}
+                            <span>{{'last_edit_time'|load_lang}} : {{imp[3][1]}} | {{'page_view'|load_lang}} : {{imp[3][7]}}</span>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="liberty-content-main wiki-article">
@@ -224,10 +227,6 @@
                 </div>
                 <div class="liberty-footer" id="bottom">
                     <p>
-                        {% if imp[3][1] != 0 %}
-                            {{'last_edit_time'|load_lang}} : {{imp[3][1]}}
-                            <br>
-                        {% endif %}
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
