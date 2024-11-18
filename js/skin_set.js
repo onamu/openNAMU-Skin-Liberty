@@ -97,9 +97,9 @@ function ringo_load_skin_set() {
         }
 
         document.getElementById("main_skin_set").innerHTML = ' \
-            <input ' + set_data["use_sys_darkmode"] + ' type="checkbox" id="use_sys_darkmode" name="use_sys_darkmode" value="use_sys_darkmode"> ' + set_language[language]['use_sys_darkmode'] + ' \
+            <label><input ' + set_data["use_sys_darkmode"] + ' type="checkbox" id="use_sys_darkmode" name="use_sys_darkmode" value="use_sys_darkmode"> ' + set_language[language]['use_sys_darkmode'] + '</label> \
             <hr class="main_hr"> \
-            <input ' + set_data["invert"] + ' type="checkbox" id="invert" name="invert" value="invert"> ' + set_language[language]['darkmode'] + ' \
+            <label><input ' + set_data["invert"] + ' type="checkbox" id="invert" name="invert" value="invert"> ' + set_language[language]['darkmode'] + '</label> \
             <hr class="main_hr"> \
             <button onclick="ringo_get_post();">' + set_language[language]['save'] + '</button> \
         ';
